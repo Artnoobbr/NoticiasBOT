@@ -11,7 +11,7 @@ import asyncio
 
 #Client(bot)
 client = commands.Bot(command_prefix='n!', help_command=None)
-newsapi = NewsApiClient (api_key='52a807b5b17d42f6b79fdd08b02d4def')
+newsapi = NewsApiClient (api_key='API_KEY')
 
 
 async def status_bot():
@@ -93,4 +93,4 @@ async def on_command_error(context, error):
     elif isinstance(error, commands.CommandOnCooldown):
         await context.send("**Aguarde:** `{:.2f}s` Para executar o comando!".format(error.retry_after))
 
-client.run('ODc0Njc5MzU2NzI1ODEzMzE4.YRKeoQ.DvCrtWXFcu1oUe2TrPBC0Vi0qQ8')
+client.run('TOKEN')
